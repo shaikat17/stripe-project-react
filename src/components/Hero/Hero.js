@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import phoneImg from "../../images/phone.svg";
+import { useGlobalContext } from "../../context";
 
 const Hero = () => {
-  return (
-    <div>Hero</div>
-  )
-}
+  const data = useGlobalContext();
 
-export default Hero
+  console.log(data);
+
+  return <div>Hero</div>;
+};
+
+export default Hero;

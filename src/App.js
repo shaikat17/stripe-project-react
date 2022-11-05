@@ -7,8 +7,12 @@ import Submenu from './components/Submenu/Submenu';
 
 function App() {
   return (
-    <h1>Stripe Project</h1>
-    </div>
+    <>
+    <Navbar />
+    <Sidebar />
+    <Hero />
+    <Submenu />
+    </>
   );
 }
 
