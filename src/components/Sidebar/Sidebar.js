@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { FaTimes } from "react-icons/fa";
+import sublinks from "../../data";
+import { useGlobalContext, userGlobalContext } from "../../context";
 
 const Sidebar = () => {
+  const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <div>Sidebar</div>
-  )
-}
+    <aside
+      className={`${
+        isSidebarOpen ? "sidebar-wrapper show" : "sidebar-wrapper"
+      }`}
+    >
+      <div className="sidebar">
+        <button className="close-btn" onClick={closeSidebar}>
+          <FaTimes />
+        </button>
+      </div>
+    </aside>
+  );
+};
 
-export default Sidebar
+export default Sidebar;
